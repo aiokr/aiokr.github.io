@@ -15,9 +15,9 @@
         <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe5d2;</i></a>
         <a href="javascript:;" class="mdui-typo-title">SIOCX</a>
         <div class="mdui-toolbar-spacer"></div>
-        <a href="" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe8b6;</i></a>
-        <a href="" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe5d5;</i></a>
-        <a href="" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe5d4;</i></a>
+        <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe8b6;</i></a>
+        <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe5d5;</i></a>
+        <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe5d4;</i></a>
     </div>
     <div class="mdui-tab mdui-color-theme mdui-color-grey-800" mdui-tab>
         <a href="#home" class="mdui-ripple mdui-ripple-white">
@@ -35,36 +35,40 @@
     </div>
     </div>
     </body>
+
+    <!-- 左侧抽屉 -->
      
-    <body>
+<body>
     <!-- 假装这里有东西 不然被顶部挡道 -->
-        <div class="mdui-container mdui-invisible">
-            <div class="mdui-row">
-            <div class="mdui-col-xs-4"></div>
-            <div class="mdui-col-xs-4">
-                <div class="mdui-card" "mdui-center">
-                    <div class="mdui-card-media">
-                        <img src="card.jpg"/>
-                        <div class="mdui-card-media-covered">
-                        <div class="mdui-card-primary">
-                            <div class="mdui-card-primary-title">Title</div>
-                            <div class="mdui-card-primary-subtitle">Subtitle</div>
-                        </div>
-                        <div class="mdui-card-actions">
-                            <button class="mdui-btn mdui-ripple mdui-ripple-white">action 1</button>
-                            <button class="mdui-btn mdui-ripple mdui-ripple-white">action 2</button>
-                        </div>
-                        </div>
+    <div class="mdui-container mdui-invisible">
+        <div class="mdui-row">
+        <div class="mdui-col-xs-4"></div>
+        <div class="mdui-col-xs-4">
+            <div class="mdui-card" "mdui-center">
+                <div class="mdui-card-media">
+                    <img src="card.jpg"/>
+                    <div class="mdui-card-media-covered">
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">Title</div>
+                        <div class="mdui-card-primary-subtitle">Subtitle</div>
+                    </div>
+                    <div class="mdui-card-actions">
                     </div>
                     </div>
-            </div>
-            <div class="mdui-col-xs-4"></div>
+                </div>
             </div>
         </div>
-    </body>
+        <div class="mdui-col-xs-4"></div>
+        </div>
+    </div>
 
-    <div class="class="mdui-container">
+    <!-- Home -->
     <div id="home" style="display: none;">
+        <!-- 头像 网格系统 -->
+        <div class="mdui-container mdui-ripple">
+            <img class="mdui-img-circle mdui-center" style="width: 200px" src="./img/logo.png"/>
+        </div>
+        <!-- 自我介绍 网格系统 -->
         <div class="mdui-container">
             <div class="mdui-row">
             <div class="mdui-col-xs-3"></div>
@@ -78,35 +82,88 @@
             <div class="mdui-col-xs-3"></div>
             </div>
         </div>
-    </div>
+        <!-- 项目介绍 网格系统 -->
         <div class="mdui-container">
             <div class="mdui-row">
             <div class="mdui-col-xs-4">
-
+                <!-- 三张卡片 -->
+                <div class="mdui-card">
+                <div class="mdui-card-media">
+                    <img src="card.jpg"/>
+                    <div class="mdui-card-media-covered mdui-card-media-covered-top">
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">Blog
+                        </div>
+                        <div class="mdui-card-primary-subtitle"></div>
+                    </div>
+                    </div>
+                </div>
+                <div class="mdui-card-actions">
+                    <button class="mdui-btn mdui-ripple">来看看吧😁</button>
+                </div>
+                </div>
             </div>
             <div class="mdui-col-xs-4">
-                
+                <div class="mdui-card">
+                <div class="mdui-card-media">
+                    <img src="card.jpg"/>
+                    <div class="mdui-card-media-covered mdui-card-media-covered-top">
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">Github</div>
+                    </div>
+                    </div>
+                </div>
+                <div class="mdui-card-actions">
+                    <button class="mdui-btn mdui-ripple">star一发~</button>
+                </div>
+                </div> 
             </div>
             <div class="mdui-col-xs-4">
-
+                <div class="mdui-card">
+                <div class="mdui-card-media">
+                    <img src="card.jpg"/>
+                    <div class="mdui-card-media-covered mdui-card-media-covered-top">
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">即将上线</div>
+                    </div>
+                    </div>
+                </div>
+                <div class="mdui-card-actions">
+                    <button class="mdui-btn mdui-ripple">action 1</button>
+                </div>
+                </div>
             </div>
             </div>
         </div>
     </div>
 
-
+    <!-- links -->
     <div id="links" style="display: none;">
         <div class="mdui-container">
             <div class="mdui-row">
-            <div class="mdui-col-xs-3"></div>
-            <div class="mdui-col-xs-6">
-                <p>
-                    <h1>23333</h1><br>
-                    高二狗|模联人<br>
-                    喜欢尝试新鲜事物|不善交际|追求自由<br>
-                </p>
+            <div class="mdui-col-xs-8">
+                <ul class="mdui-list">
+                    <a href="https://viosey.com/"><li class="mdui-list-item mdui-ripple">
+                        <div class="mdui-list-item-avatar"><img src="https://www.mocurio.com/img/icon/viosey.png"/></div>
+                        <div class="mdui-list-item-content">Viosey-一生想做自由Geek</div>
+                    </li></a>
+                    <li class="mdui-list-item mdui-ripple">
+                        <div class="mdui-list-item-avatar"><img src="avatar2.jpg"/></div>
+                        <div class="mdui-list-item-content">me, Scott, Jennifer</div>
+                    </li>
+                    <li class="mdui-list-item mdui-ripple">
+                        <div class="mdui-list-item-avatar"><img src="avatar3.jpg"/></div>
+                        <div class="mdui-list-item-content">Grace Ng</div>
+                    </li>
+                    <li class="mdui-list-item mdui-ripple">
+                        <div class="mdui-list-item-avatar"><img src="avatar4.jpg"/></div>
+                        <div class="mdui-list-item-content">Kerem Suer</div>
+                    </li>
+                </ul>
             </div>
-            <div class="mdui-col-xs-3"></div>
+            <div class="mdui-col-xs-4">
+
+            </div>
             </div>
         </div>
     </div>
