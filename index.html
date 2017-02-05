@@ -8,37 +8,37 @@
     <link rel="stylesheet" href="mdui/dist/css/mdui.min.css">
 </head> 
 
-    <body class="landing-page">
+<body class="mdui-theme-layout-dark">
+
     <!-- 顶部导航栏 --> 
     <div class="mdui-appbar mdui-appbar-fixed">
-    <div class="mdui-toolbar mdui-color-theme mdui-color-grey-800">
-        <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe5d2;</i></a>
-        <a href="javascript:;" class="mdui-typo-title">SIOCX</a>
-        <div class="mdui-toolbar-spacer"></div>
-        <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe8b6;</i></a>
-        <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe5d5;</i></a>
-        <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe5d4;</i></a>
+        <div class="mdui-toolbar mdui-color-theme mdui-color-grey-800">
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe5d2;</i></a>
+            <a href="javascript:;" class="mdui-typo-title">SIOCX</a>
+            <div class="mdui-toolbar-spacer"></div>
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe8b6;</i></a>
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe5d5;</i></a>
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe5d4;</i></a>
+        </div>
+        <div class="mdui-tab mdui-color-theme mdui-color-grey-800" mdui-tab>
+            <a href="#home" class="mdui-ripple mdui-ripple-white">
+            <i class="mdui-icon material-icons">&#xe0cd;</i>
+            <label>Home</label>
+            </a>
+            <a href="#links" class="mdui-ripple mdui-ripple-white">
+            <i class="mdui-icon material-icons">&#xe87d;</i>
+            <label>Friends</label>
+            </a>
+            <a href="#about" class="mdui-ripple mdui-ripple-white">
+            <i class="mdui-icon material-icons">&#xe8a3;</i>
+            <label>About</label>
+            </a>
+        </div>
     </div>
-    <div class="mdui-tab mdui-color-theme mdui-color-grey-800" mdui-tab>
-        <a href="#home" class="mdui-ripple mdui-ripple-white">
-        <i class="mdui-icon material-icons">&#xe0cd;</i>
-        <label>Home</label>
-        </a>
-        <a href="#links" class="mdui-ripple mdui-ripple-white">
-        <i class="mdui-icon material-icons">&#xe87d;</i>
-        <label>Friends</label>
-        </a>
-        <a href="#about" class="mdui-ripple mdui-ripple-white">
-        <i class="mdui-icon material-icons">&#xe8a3;</i>
-        <label>About</label>
-        </a>
-    </div>
-    </div>
-    </body>
 
     <!-- 左侧抽屉 -->
      
-<body>
+
     <!-- 假装这里有东西 不然被顶部挡道 -->
     <div class="mdui-container mdui-invisible">
         <div class="mdui-row">
@@ -66,7 +66,7 @@
     <div id="home" style="display: none;">
         <!-- 头像 网格系统 -->
         <div class="mdui-container mdui-ripple">
-            <img class="mdui-img-circle mdui-center" style="width: 200px" src="./img/logo.png"/>
+            <img class="mdui-img-circle mdui-center" style="width: 150px" src="./img/logo.png"/>
         </div>
         <!-- 自我介绍 网格系统 -->
         <div class="mdui-container">
@@ -99,7 +99,7 @@
                     </div>
                 </div>
                 <div class="mdui-card-actions">
-                    <button class="mdui-btn mdui-ripple">来看看吧😁</button>
+                    <a class="mdui-btn mdui-ripple" href="https://blog.siocx.space/">来看看吧😁</a>
                 </div>
                 </div>
             </div>
@@ -144,39 +144,65 @@
             <div class="mdui-col-xs-8">
                 <ul class="mdui-list">
                     <a href="https://viosey.com/"><li class="mdui-list-item mdui-ripple">
-                        <div class="mdui-list-item-avatar"><img src="https://www.mocurio.com/img/icon/viosey.png"/></div>
+                        <div class="mdui-list-item-avatar"><img src="https://ooo.0o0.ooo/2016/12/23/585d119188d4f.png"/></div>
                         <div class="mdui-list-item-content">Viosey-一生想做自由Geek</div>
                     </li></a>
-                    <li class="mdui-list-item mdui-ripple">
-                        <div class="mdui-list-item-avatar"><img src="avatar2.jpg"/></div>
-                        <div class="mdui-list-item-content">me, Scott, Jennifer</div>
-                    </li>
-                    <li class="mdui-list-item mdui-ripple">
-                        <div class="mdui-list-item-avatar"><img src="avatar3.jpg"/></div>
-                        <div class="mdui-list-item-content">Grace Ng</div>
-                    </li>
-                    <li class="mdui-list-item mdui-ripple">
-                        <div class="mdui-list-item-avatar"><img src="avatar4.jpg"/></div>
-                        <div class="mdui-list-item-content">Kerem Suer</div>
-                    </li>
+                    <a href="https://imiku.me/"><li class="mdui-list-item mdui-ripple">
+                        <div class="mdui-list-item-avatar"><img src="https://ooo.0o0.ooo/2017/02/04/5895986042d5e.png"/></div>
+                        <div class="mdui-list-item-content">冰凌胧月的后宫-Welcome to disturb</div>
+                    </li></a>
+
                 </ul>
             </div>
             <div class="mdui-col-xs-4">
-
+            <div class="mdui-panel mdui-panel-popout" mdui-panel="{accordion: true}">
+            <div class="mdui-panel-item">
+                <div class="mdui-panel-item-header">我的友链信息</div>
+                <div class="mdui-panel-item-body">
+                <p>Name: SIOCX</p>
+                <p>Slogan: 知行合一</p>
+                <p>Link: <a href="https://siocx.space">https://siocx.space</a></p>
+                <p>
+                    <div class="mdui-chip">
+                        <img class="mdui-chip-icon" src="http://ok86hkelh.bkt.clouddn.com//image/logo/favicon.ico"/>
+                        <span class="mdui-chip-title">48*48 ico文件</span>
+                    </div>
+                </p>
+                </div>
+            </div>
+            <div class="mdui-panel-item">
+                <div class="mdui-panel-item-header">申请互换友链</div>
+                <div class="mdui-panel-item-body">
+                <p>点击右下角弹出按钮中的</p>
+                <p><i class="mdui-icon material-icons">&#xe864;</i></p>
+                <p>处理完毕之后我会通过电子邮件提醒</p>
+                </div>
+            </div>
+            </div>
             </div>
             </div>
         </div>
     </div>
-        
 
-    
-             
-    <script type="text/javascript" src="assets/plugins/jquery-1.12.3.min.js"></script>
+    <!-- FAB -->
+    <div class="mdui-fab-wrapper"  mdui-fab="{trigger: 'hover'}" id="exampleFab">
+        <button class="mdui-fab mdui-ripple mdui-color-theme-accent">
+            <!-- 默认显示的图标 -->
+            <i class="mdui-icon material-icons">&#xe145;</i>
+            
+            <!-- 在拨号菜单开始打开时，平滑切换到该图标，若不需要切换图标，则可以省略该元素 -->
+            <i class="mdui-icon mdui-fab-opened material-icons">&#xe254;</i>
+        </button>
+        <div class="mdui-fab-dial">
+            <a href="https://blog.siocx.space/apply-link/"><button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-pink"><i class="mdui-icon material-icons">&#xe864;</i></button></a>
+            <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-red"><i class="mdui-icon material-icons">&#xe866;</i></button>
+            <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-orange"><i class="mdui-icon material-icons">&#xe191;</i></button>
+            <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-blue"><i class="mdui-icon material-icons">&#xe913;</i></button>
+        </div>
+    </div>
+
     <!-- MDUI Javascript --> 
     <script type="text/javascript" src="mdui/dist/js/mdui.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/jquery-match-height/jquery.matchHeight-min.js"></script>
-    <script type="text/javascript" src="assets/js/main.js"></script>
-    
 </body>
 </html> 
 
