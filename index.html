@@ -1,322 +1,254 @@
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
     <title>SIOCX</title>
     <!-- MDUI -->
     <link rel="stylesheet" href="mdui/dist/css/mdui.min.css">
     <!-- ali iconfont -->
     <link rel="stylesheet" type="text/css" href="./iconfont/iconfont.css">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
 </head> 
 
-<body>
-
+<body class="mdui-theme-primary-grey mdui-theme-accent-grey mdui-appbar-with-toolbar mdui-appbar-with-tab-larger mdui-loaded">
     <!-- 顶部导航栏 --> 
-<div class="mdui-appbar mdui-appbar-fixed">
-    <div class="mdui-toolbar mdui-color-theme mdui-color-grey-800">
-        <a mdui-drawer="{target: '#main-drawer'}" href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe5d2;</i></a>
-        <a href="javascript:;" class="mdui-typo-title">SIOCX</a>
-        <div class="mdui-toolbar-spacer"></div>
-        <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe8b6;</i></a>
-        <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe5d5;</i></a>
-        <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe5d4;</i></a>
+    <div class="mdui-appbar mdui-appbar-fixed">
+        <div class="mdui-toolbar mdui-color-theme-800">
+            <a class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#left-drawer'}">
+                <i class="mdui-icon material-icons">&#xe5d2;</i>
+            </a>
+            <div class="mdui-toolbar-spacer"> </div>
+            <span class="mdui-typo-headline">SIOCX</span>
+            <div class="mdui-toolbar-spacer"> </div>
+            <a class="mdui-btn mdui-btn-icon" mdui-menu="{target: '#share_menu'}">
+                <i class="mdui-icon material-icons">share</i>
+            </a>
+            <ul class="mdui-menu" id="share_menu">
+                <li class="class="mdui-menu-item">
+                </li>
+            </ul>
+        </div>
+        <div class="mdui-tab mdui-color-theme-800 mdui-tab-centered" mdui-tab>
+            <a href="#home" class="mdui-ripple mdui-ripple-white mdui-tab-active">
+                <i class="mdui-icon material-icons">&#xe60e;</i>
+                <label>Home</label>
+            </a>
+            <a href="#links" class="mdui-ripple mdui-ripple-white mdui-tab-active">
+                <i class="mdui-icon material-icons">&#xe87d;</i>
+                <label>Friends</label>
+            </a>
+            <a href="#about" class="mdui-ripple mdui-ripple-white mdui-tab-active">
+                <i class="mdui-icon material-icons">&#xe8a3;</i>
+                <label>About</label>
+            </a>
+            <a href="#info" class="mdui-ripple mdui-ripple-white mdui-tab-active">
+                <i class="mdui-icon material-icons">&#xe068;</i>
+                <label>Info</label>
+            </a>
+        </div>
     </div>
-    <div class="mdui-tab mdui-color-theme mdui-color-grey-800" mdui-tab>
-        <a href="#home" class="mdui-ripple mdui-ripple-white">
-        <i class="mdui-icon material-icons">&#xe60e;</i>
-        <label>Home</label>
-        </a>
-        <a href="#links" class="mdui-ripple mdui-ripple-white">
-        <i class="mdui-icon material-icons">&#xe87d;</i>
-        <label>Friends</label>
-        </a>
-        <a href="#about" class="mdui-ripple mdui-ripple-white">
-        <i class="mdui-icon material-icons">&#xe8a3;</i>
-        <label>About</label>
-        </a>
-        </a>
-        <a href="#info" class="mdui-ripple mdui-ripple-white">
-        <i class="mdui-icon material-icons">&#xe068;</i>
-        <label>Info</label>
-        </a>
-    </div>
-</div>
-
-    <!-- 假装这里有东西 不然被顶部挡道 -->
-    <div style="height: 200px"> </div>
-
-    <!-- 右侧抽屉 --> 
-    <div class="mdui-drawer mdui-drawer-right mdui-color-white mdui-drawer-close" id=main-drawer>
+    <div class="mdui-drawer mdui-drawer-close mdui-drawer-scrollbar" id="left-drawer" style="overflow-y: hidden;">
+        <div class="mdui-hidden-md-up">
+            <div class="mdui-grid-tile">
+                <div class="mdui-card-media">
+                    <img src="https://okwerfqj4.qnssl.com//image/img/daily_pic.png">
+                </div>
+                <div class="mdui-card-media-covered">
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">SIOCX</div>
+                        <div class="mdui-card-primary-subtitle">stark_chen@outlook.com</div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <ul class="mdui-list">
-        <li class="mdui-list-item mdui-ripple">
-            <i class="mdui-list-item-icon mdui-icon material-icons">&#xe168;</i>
-            <div class="mdui-list-item-content">Inbox</div>
-        </li>
-        <li class="mdui-list-item mdui-ripple">
-            <i class="mdui-list-item-icon mdui-icon material-icons">&#xe163;</i>
-            <div class="mdui-list-item-content">Outbox</div>
-        </li>
-        <li class="mdui-list-item mdui-ripple">
-            <i class="mdui-list-item-icon mdui-icon material-icons">&#xe872;</i>
-            <div class="mdui-list-item-content">Trash</div>
-        </li>
-        <li class="mdui-list-item mdui-ripple">
-            <i class="mdui-list-item-icon mdui-icon material-icons">&#xe000;</i>
-            <div class="mdui-list-item-content">Spam</div>
-        </li>
+            <div class="mdui-panel mdui-panel-gapless" mdui-panel>
+                <div class="mdui-panel-item">
+                    <div class="mdui-panel-item-header">First</div>
+                    <div class="mdui-panel-item-body">
+                    <p>First content</p>
+                    <p>First content</p>
+                    <p>First content</p>
+                    <p>First content</p>
+                    <p>First content</p>
+                    <p>First content</p>
+                    </div>
+                </div>
+                <div class="mdui-panel-item">
+                    <div class="mdui-panel-item-header">Second</div>
+                    <div class="mdui-panel-item-body">
+                    <p>Second content</p>
+                    <p>Second content</p>
+                    <p>Second content</p>
+                    <p>Second content</p>
+                    <p>Second content</p>
+                    <p>Second content</p>
+                    </div>
+                </div>
+                <div class="mdui-panel-item">
+                    <div class="mdui-panel-item-header">Third</div>
+                    <div class="mdui-panel-item-body">
+                    <p>Third content</p>
+                    <p>Third content</p>
+                    <p>Third content</p>
+                    <p>Third content</p>
+                    <p>Third content</p>
+                    <p>Third content</p>
+                    </div>
+                </div>
+            </div>
         </ul>
     </div>
-
-    <!-- Home -->
-    <div id="home" style="display: none;">
-        <!-- 头像 网格系统 -->
-        <div class="mdui-container">
-            <img class="mdui-img-circle mdui-center mdui-shadow-0" style="width: 150px" src="./img/logo.png"/>
-        </div>
-        <!-- 自我介绍 网格系统 -->
-        <div class="mdui-container">
-            <div class="mdui-row">
-            <div class="mdui-col-xs-3"> </div>
-            <div class="mdui-col-xs-6">
-                <p>
-                    <div class="mdui-typo-display-2">SIOCX</div>
-                    <div class="mdui-typo-title">高二狗|模联人</div>
-                    <div class="mdui-typo-title">喜欢尝试新鲜事物|向往自由</div>
-                </p>
-            </div>
-            <div class="mdui-col-xs-3"></div>
-            </div>
-        </div>
-        <!-- 项目介绍 网格系统 -->
-        <div class="mdui-container">
-            <div class="mdui-row">
-            <div class="mdui-col-xs-4">
-                <!-- 三张卡片 -->
-                <div class="mdui-card">
-                <div class="mdui-card-media">
-                    <img src="card.jpg"/>
-                    <div class="mdui-card-media-covered mdui-card-media-covered-top">
-                    <div class="mdui-card-primary">
-                        <div class="mdui-card-primary-title">Blog
-                        </div>
-                        <div class="mdui-card-primary-subtitle"></div>
-                    </div>
-                    </div>
-                </div>
-                <div class="mdui-card-actions">
-                    <a href="https://blog.siocx.space/" class="mdui-btn mdui-ripple">来看看吧😁</a>
-                </div>
-                </div>
-            </div>
-            <div class="mdui-col-xs-4">
-                <div class="mdui-card">
-                <div class="mdui-card-media">
-                    <img src="card.jpg"/>
-                    <div class="mdui-card-media-covered mdui-card-media-covered-top">
-                    <div class="mdui-card-primary">
-                        <div class="mdui-card-primary-title">Github</div>
-                    </div>
-                    </div>
-                </div>
-                <div class="mdui-card-actions">
-                    <a href="https://github.com/Stark2Chen" class="mdui-btn mdui-ripple">star一发~</a>
-                </div>
-                </div> 
-            </div>
-            <div class="mdui-col-xs-4">
-                <div class="mdui-card">
-                <div class="mdui-card-media">
-                    <img src="card.jpg"/>
-                    <div class="mdui-card-media-covered mdui-card-media-covered-top">
-                    <div class="mdui-card-primary">
-                        <div class="mdui-card-primary-title">即将上线</div>
-                    </div>
-                    </div>
-                </div>
-                <div class="mdui-card-actions">
-                    <button class="mdui-btn mdui-ripple">action 1</button>
-                </div>
-                </div>
-            </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- links -->
-    <div id="links" style="display: none;">
-        <div class="mdui-container">
-            <div class="mdui-row">
-            <div class="mdui-col-xs-8">
-                <ul class="mdui-list">
-                    <a href="https://viosey.com/"><li class="mdui-list-item mdui-ripple">
-                        <div class="mdui-list-item-avatar"><img src="https://ooo.0o0.ooo/2016/12/23/585d119188d4f.png"/></div>
-                        <div class="mdui-list-item-content">Viosey-一生想做自由Geek</div>
-                    </li></a>
-                    <a href="https://imiku.me/"><li class="mdui-list-item mdui-ripple">
-                        <div class="mdui-list-item-avatar"><img src="https://ooo.0o0.ooo/2017/02/04/5895986042d5e.png"/></div>
-                        <div class="mdui-list-item-content">冰凌胧月的后宫-Welcome to disturb</div>
-                    </li></a>
-                    <a href="https://halyul.cc"><li class="mdui-list-item mdui-ripple">
-                        <div class="mdui-list-item-avatar"><img src="https://okr20nkt9.qnssl.com/avatar-c.png"/></div>
-                        <div class="mdui-list-item-content">Halyul-Never do a dreamer.</div>
-                    </li></a>
-                </ul>
-            </div>
-            <div class="mdui-col-xs-4">
-            <div class="mdui-panel" mdui-panel="{accordion: true}">
-            <div class="mdui-panel-item mdui-panel-item-open">
-                <div class="mdui-panel-item-header">我的友链信息</div>
-                <div class="mdui-panel-item-body">
-                <p>Name: SIOCX</p>
-                <p>Slogan: 知行合一</p>
-                <p>Link: <a href="https://siocx.space">https://siocx.space</a></p>
-                <p>
-                    <div class="mdui-chip">
-                        <img class="mdui-chip-icon" src="https://okwerfqj4.qnssl.com//image/logo/favicon.ico"/>
-                        <span class="mdui-chip-title">48*48 ico文件</span>
-                    </div>
-                </p>
-                </div>
-            </div>
-            <div class="mdui-panel-item">
-                <div class="mdui-panel-item-header">申请互换友链</div>
-                <div class="mdui-panel-item-body">
-                <p>点击右下角弹出按钮中的</p>
-                <p><i class="mdui-icon material-icons">&#xe864;</i></p>
-                <p>处理完毕之后我会通过电子邮件提醒</p>
-                </div>
-            </div>
-            </div>
-            </div>
-            </div>
-        </div>
-    </div>
-
-<!-- about -->
-<div id="about" style="display: none">
     <div class="mdui-container">
-        <div class="mdui-row">
-            <!-- 联系方式卡片 -->
-            <div class="mdui-col-xs-6">
-                <div class="mdui-list">
-                <li class="mdui-subheader">Contact Me</li>
-                <li class="mdui-list-item mdui-ripple">
-                    <i class="mdui-icon mdui-list-item-icon iconfont icon-qq"></i>
-                    <div class="mdui-list-item-content">Nzc0NTk5Mzcy</div>
-                </li>
-                <li class="mdui-list-item mdui-ripple">
-                    <i class="mdui-list-item-icon mdui-icon material-icons">&#xe0be;</i>
-                    <div class="mdui-list-item-content">Trash</div>
-                </li>
-                <li class="mdui-subheader">Know me more</li>
-                <a href="https://www.zhihu.com/people/starkchen/answers" target="_blank" class="mdui-list-item mdui-ripple">
-                    <i class="mdui-icon mdui-list-item-icon iconfont icon-zhihu1"></i>
-                    <div class="mdui-list-item-content">zhihu</div>
-                </a>
-                </div>
-                </div>
-            <!-- 关于个人卡片 -->
-            <div class="mdui-col-xs-6">
-                <div class="mdui-card">
-                    <!-- 卡片头部，包含头像、标题、副标题 -->
-                    <div class="mdui-card-header">
-                        <img class="mdui-card-header-avatar" src="https://okwerfqj4.qnssl.com//image/logo/favicon.ico"/>
-                        <div class="mdui-card-header-title">SIOCX</div>
-                        <div class="mdui-card-header-subtitle">知行合一</div>
+        <div id="home" style="display: none;">
+        <br>
+            <div class="mdui-row">
+                <div class="mdui-col-xs-12 mdui-col-sm-12">
+                <br>
+                    <div class="mdui-hidden-sm-up">
+                        <img class="mdui-center" src="https://okwerfqj4.qnssl.com//image/logo/favicon.png" width="96px">
                     </div>
-                    <!-- 卡片的媒体内容，可以包含图片、视频等媒体内容，以及标题、副标题 -->
-                    <div class="mdui-card-media">
-                        <img src="https://okwerfqj4.qnssl.com//image/img/daily_pic.png"/>
+                    <div class="mdui-hidden-xs-down">
+                    <img class="mdui-center" src="https://okwerfqj4.qnssl.com//image/logo/favicon.png" width="144px">
                     </div>
-                    <!-- 卡片的标题和副标题 -->
-                    <div class="mdui-card-primary">
-                        <div class="mdui-card-primary-title">关于我</div>
-                        <div class="mdui-card-primary-subtitle"></div>
-                    </div>
-                     <!-- 卡片的内容 -->
-                    <div class="mdui-card-content">子曰：「学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知，而不愠，不亦君子乎？」</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- info -->
-<div id="info" style="display: none">
-    <div class="mdui-container">
-        <div class="mdui-row">
-            <div class="mdui-col-xs-6">。。。</div>
-            <!-- 站点日志 -->
-            <div class="mdui-col-xs-6">
-                <div class="mdui-panel" mdui-panel="{accordion: true}">
-                    <div class="mdui-panel-item">
-                        <div class="mdui-panel-item-header">站点日志</div>
-                        <div class="mdui-panel-item-body"></div>
-                    </div>
-                    <div class="mdui-panel-item">
-                        <div class="mdui-panel-item-header">2017</div>
-                        <div class="mdui-panel-item-body">
-                            <p>
-                            <div class="mdui-panel" mdui-panel="{accordion: true}">
-                                <div class="mdui-panel-item">
-                                <div class="mdui-panel-item-header">2017-01</div>
-                                    <div class="mdui-panel-item-body">
-                                    <p>2017.01.16 开始通过Hexo建立个人博客，采取Coding.net和Github Pages同时托管的方式。</p>
-                                    <p>2017.01.17 注册siocx.space域名，并且将siocx.space通过CNAME绑定到Coding.net的仓库上，gh.siocx.space绑定到Github Pages的仓库</p>
-                                    <p>2017.01.23 启用Material主题，修改博客地址为blog.siocx.space</p>
-                                    <p>2017.01.27 建立sitemap 优化搜索引擎索引，同时创建robots.txt文件 屏蔽百度蜘蛛对网站的所有抓取</p>
-                                    <p>2017.01.30 将博客源代码仓库托管至Coding.net，通过DaoCloud的持续集成发布Hexo博客</p>
-                                    </div>
-                                </div>
-                                <div class="mdui-panel-item">
-                                <div class="mdui-panel-item-header">2017-02</div>
-                                    <div class="mdui-panel-item-body">
-                                    <p>2017.02.04 交换第一个友情链接</p>
-                                    <p>2017.02.05 使用MDUI的模板架设个人主页，域名为www.siocx.space</p>
-                                    </div>
-                                </div>
+                    <div class="mdui-typo mdui-text-center">
+                        <div class="mdui-typo-headline">SIOCX</div>
+                        <div class="mdui-card-content">
+                        <p>
+                            <div class="mdui-chip">
+                                <span class="mdui-chip-title">高二狗</span>
                             </div>
-                            </p>
+                            <div class="mdui-chip">
+                                <span class="mdui-chip-title">文科生</span>
+                            </div>
+                            <div class="mdui-chip">
+                                <span class="mdui-chip-title">模联人</span>
+                            </div>
+                        </p>
                         </div>
                     </div>
-                    <div class="mdui-panel-item">
-                        <div class="mdui-panel-item-header">2016</div>
-                        <div class="mdui-panel-item-body">
-                            ...
+                </div>
+            </div>
+            <div class="mdui-row">
+                <div class="mdui-col-xs-12 mdui-col-sm-4">
+                    <div class="mdui-card">
+                        <div class="mdui-card-media">
+                            <img src="https://okwerfqj4.qnssl.com//image/img/blog-1.png"/>
+                            <div class="mdui-card-media-covered">
+                            <div class="mdui-card-primary">
+                                <div class="mdui-card-primary-title">SIOCX Blog</div>
+                                <div class="mdui-card-primary-subtitle">知行合一</div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="mdui-card-actions">
+                            <a href="https://blog.siocx.space" class="mdui-btn mdui-ripple">来看看吧~</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdui-col-xs-12 mdui-col-sm-4">
+                    <div class="mdui-card">
+                        <div class="mdui-card-media">
+                            <img src="https://okwerfqj4.qnssl.com//image/img/github.png"/>
+                            <div class="mdui-card-media-covered">
+                            <div class="mdui-card-primary">
+                                <div class="mdui-card-primary-title">Github</div>
+                                <div class="mdui-card-primary-subtitle">全球最大代码托管网站</div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="mdui-card-actions">
+                            <a herf="https://github.com/Stark2Chen" class="mdui-btn mdui-ripple">来star一发~</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdui-col-xs-12 mdui-col-sm-4">
+                    <div class="mdui-card">
+                        <div class="mdui-card-media">
+                            <img src="card.jpg"/>
+                            <div class="mdui-card-media-covered">
+                            <div class="mdui-card-primary">
+                                <div class="mdui-card-primary-title">即将上线</div>
+                                <div class="mdui-card-primary-subtitle">敬请期待</div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="mdui-card-actions">
+                            <button class="mdui-btn mdui-ripple">action 1</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-
-<!-- FAB -->
-<div class="mdui-fab-wrapper"  mdui-fab="{trigger: 'hover'}" id="exampleFab">
-    <button class="mdui-fab mdui-ripple mdui-color-theme-accent mdui-color-indigo">
-        <!-- 默认显示的图标 -->
-        <i class="mdui-icon material-icons">&#xe145;</i>
-            
-        <!-- 在拨号菜单开始打开时，平滑切换到该图标，若不需要切换图标，则可以省略该元素 -->
-        <i class="mdui-icon mdui-fab-opened material-icons">&#xe254;</i>
-    </button>
-    <div class="mdui-fab-dial">
-        <a href="https://blog.siocx.space/apply-link/" class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-pink" mdui-tooltip="{content: '申请友情链接', position: 'left'}"><i class="mdui-icon material-icons">&#xe864;</i></a>
-        <a class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-red"><i class="mdui-icon material-icons">&#xe866;</i></a>
-        <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-orange"><i class="mdui-icon material-icons">&#xe191;</i></button>
-        <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-blue"><i class="mdui-icon material-icons">&#xe913;</i></button>
-    </div>
-</div>
-</body>
-
-<body class="mdui-bottom-nav-fixed">
-<!-- 底部信息栏 -->
-<div class="mdui-bottom-nav mdui-valign">
-    <i class="mdui-icon material-icons">&#xe90c;</i>
-    <label>  SIOCX 2017</label>
-</div>
-
+        <div id="links" style="display: none;">
+        <br>
+            <div class="mdui-row">
+                <div class="mdui-col-xs-12 mdui-col-sm-6">
+                    <ul class="mdui-list">
+                    <li class="mdui-list-item mdui-ripple">
+                        <div class="mdui-list-item-avatar"><img src="https://ooo.0o0.ooo/2016/12/23/585d119188d4f.png"/></div>
+                        <div class="mdui-list-item-content">
+                        <div class="mdui-list-item-title">Viosey</div>
+                        <div class="mdui-list-item-text mdui-list-item-one-line">一生想做自由Geek</div>
+                        </div>
+                    </li>
+                    <li class="mdui-divider-inset mdui-m-y-0"></li>
+                    <li class="mdui-list-item mdui-ripple">
+                        <div class="mdui-list-item-avatar"><img src="https://ooo.0o0.ooo/2017/02/04/5895986042d5e.png"/></div>
+                        <div class="mdui-list-item-content">
+                        <div class="mdui-list-item-title">冰凌胧月的后宫</div>
+                        <div class="mdui-list-item-text mdui-list-item-one-line">Welcome to disturb</div>
+                        </div>
+                    </li>
+                    <li class="mdui-divider-inset mdui-m-y-0"></li>
+                    <li class="mdui-list-item mdui-ripple">
+                        <div class="mdui-list-item-avatar"><img src="https://okr20nkt9.qnssl.com/avatar-c.png"/></div>
+                        <div class="mdui-list-item-content">
+                        <div class="mdui-list-item-title">Halyul</div>
+                        <div class="mdui-list-item-text mdui-list-item-one-line">Never do a dreamer.</div>
+                        </div>
+                    </li>
+                    </ul>
+                </div>
+                <div class="mdui-col-xs-12 mdui-col-sm-6">
+                    <div class="mdui-panel mdui-panel-gapless" mdui-panel>
+                        <div class="mdui-panel-item">
+                            <div class="mdui-panel-item-header">我的友链信息</div>
+                            <div class="mdui-panel-item-body">
+                            <p>Name: SIOCX</p>
+                            <p>Slogan: 知行合一</p>
+                            <p>Link: <a href="https://siocx.space">https://siocx.space</a></p>
+                            <p>
+                                <div class="mdui-chip">
+                                    <img class="mdui-chip-icon" src="https://okwerfqj4.qnssl.com//image/logo/favicon.ico"/>
+                                    <span class="mdui-chip-title">48*48 ico文件</span>
+                                </div>
+                            </p>
+                            </div>
+                        </div>
+                        <div class="mdui-panel-item">
+                            <div class="mdui-panel-item-header">申请添加友链</div>
+                            <div class="mdui-panel-item-body">
+                            <p>Second content</p>
+                            <p>Second content</p>
+                            <p>Second content</p>
+                            <p>Second content</p>
+                            <p>Second content</p>
+                            <p>Second content</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+    <footer>
+        <div class="mdui-divider"> </div>
+        <br>
+        <div id="footer" class="mdui-container mdui-typo mdui-text-center">
+            <span class="copyright">2017 SIOCX</span>
+        </div>
+    </footer>
     <!-- MDUI Javascript --> 
     <script type="text/javascript" src="mdui/dist/js/mdui.min.js"></script>
 </body>
