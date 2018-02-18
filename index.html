@@ -20,7 +20,7 @@
             <div class="mdui-center">
                 <div class="mdui-text-center mdui-typo-title">aiokr</div>
                 <br>
-                <div class="mdui-text-center mdui-typo-subheading">梓谓其文 睿乃其质</div>
+                <div id="quotation" class="mdui-text-center mdui-typo-subheading">梓谓其文 睿乃其质</div>
                 <br>
                 <a class="mdui-btn" href="https://i.aiokr.com">
                     <i class="mdui-icon mdui-icon-left material-icons">book</i>Blog</a>
@@ -30,5 +30,10 @@
         </div>
     </div>
 </body>
+<script>
+    $.post("https://quotation.aiokr.com/", function (hitokoto) {
+        $(".quotation").html(hitokoto);
+    });
+</script>
 
 </html>
