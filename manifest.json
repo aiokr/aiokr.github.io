@@ -3,12 +3,12 @@
   "name": "aiokr",
   "icons": [
     {
-      "src": "144.png",
+      "src": "assets/images/144.png",
       "type": "image/png",
       "sizes": "144x144"
     },
     {
-      "src": "192.png",
+      "src": "assets/images/192.png",
       "type": "image/png",
       "sizes": "192x192"
     }
