@@ -6,6 +6,7 @@
     <meta http-equiv="x-dns-prefetch-control" content="on">
     <title>aiokr</title>
     <meta name="HandheldFriendly" content="true">
+    <link rel="manifest" href="manifest.js">
     <link rel="icon" sizes="144x144" href="https://repo.lzmun.com/avatar.png-imagezip">
     <link rel="icon" sizes="192x192" href="https://repo.lzmun.com/avatar.png-imagezip">
     <link rel="stylesheet" href="./assets/css/mdui.min.css">
@@ -13,6 +14,7 @@
     <link rel=”dns-prefetch” href="https://i.aiokr.com">
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <script src="./assets/js/mdui.min.js"></script>
+    <script src="./assets/js/rss.js"></script>
 </head>
 
 <body class="mdui-loaded">
@@ -33,42 +35,15 @@
                 <i class="mdui-icon mdui-icon-left material-icons">code</i>Github</a>
         </div>
     </div>
-    <div id="labs" class="mdui-valign" style="height:100vh">
-        <div class="mdui-container">
-            <div class="mdui-panel" mdui-panel>
-  
-                <div class="mdui-panel-item">
-                  <div class="mdui-panel-item-header">
-                    <div class="mdui-panel-item-title">HITOKOTO</div>
-                    <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
-                  </div>
-                  <div class="mdui-panel-item-body mdui-panel-item-open">
-                    <p>这是一个类似于“一言”的功能，可以从指定的文本中随机抽取句子进行输出。在我的个人主页以及博客都有调用。
-                    </p>
-                    <div>例如：<p class="hitokotoEcho">示例...</p> </div>
-                    <div class="mdui-panel-item-actions">
-                      <a class="mdui-btn mdui-btn-raised" href="https://hitokoto.aiokr.com/" target="_blank">尝试</a>
-                    </div>
-                  </div>
-                </div>
-                
-                
-                
-              </div>
-        </div>
-    </div>
-    <div id="coding pages" class="mdui-valign" style="height:3vh">
-        <div class="mdui-center">
-            <p>Hosted by
-                <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
-            </p>
-        </div>
-    </div>
+
+
+    <!--HITOKOTO-->
     <script>
         $.post("https://hitokoto.aiokr.com/", function (hitokoto) {
             $(".hitokotoEcho").html(hitokoto);
         })
     </script>
+
 </body>
 
 </html>
