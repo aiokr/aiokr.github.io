@@ -11,6 +11,9 @@ self.importScripts("https://cdnjs.cat.net/ajax/libs/sw-toolbox/3.6.1/sw-toolbox.
 self.toolbox.options.debug = false;
 self.toolbox.options.networkTimeoutSeconds = 3;
 
+var staticImageCacheName = "image" + cacheVersion;
+var staticAssetsCacheName = "assets" + cacheVersion;
+
 /* staticImageCache */
 self.toolbox.router.get("/(.*)", self.toolbox.cacheFirst, {
   origin: /repo\.lzmun\.com/,
@@ -18,6 +21,18 @@ self.toolbox.router.get("/(.*)", self.toolbox.cacheFirst, {
       name: staticImageCacheName,
       maxEntries: maxEntries
   }
+});
+
+/* StaticAssetsCache */
+self.toolbox.router.get("/css/(.*)", self.toolbox.networkFirst, {origin: /aiokr\.github\.io/,});
+self.toolbox.router.get("/js/(.*)", self.toolbox.networkFirst, {origin: /aiokr\.github\.io/,});
+self.toolbox.router.get("/static/(.*)", self.toolbox.networkFirst, {origin: /aiokr\.github\.io/,});
+self.toolbox.router.get("/fonts/(.*)", self.toolbox.cacheFirst, {
+    origin: /aiokr\.github\.io/,
+    cache: {
+        name: staticAssetsCacheName,
+        maxEntries: maxEntries
+    }
 });
 
 self.addEventListener("install",
