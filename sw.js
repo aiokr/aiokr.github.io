@@ -14,15 +14,6 @@ self.toolbox.options.networkTimeoutSeconds = 3;
 var staticImageCacheName = "image" + cacheVersion;
 var staticAssetsCacheName = "assets" + cacheVersion;
 
-/* staticImageCache */
-self.toolbox.router.get("/(.*)", self.toolbox.cacheFirst, {
-  origin: /repo\.lzmun\.com/,
-  cache: {
-      name: staticImageCacheName,
-      maxEntries: maxEntries
-  }
-});
-
 /* StaticAssetsCache */
 self.toolbox.router.get("/css/(.*)", self.toolbox.networkFirst, {origin: /aiokr\.github\.io/,});
 self.toolbox.router.get("/js/(.*)", self.toolbox.networkFirst, {origin: /aiokr\.github\.io/,});
@@ -33,6 +24,15 @@ self.toolbox.router.get("/fonts/(.*)", self.toolbox.cacheFirst, {
         name: staticAssetsCacheName,
         maxEntries: maxEntries
     }
+});
+
+/* staticImageCache */
+self.toolbox.router.get("/(.*)", self.toolbox.cacheFirst, {
+  origin: /i\.loli\.net/,
+  cache: {
+      name: staticImageCacheName,
+      maxEntries: maxEntries
+  }
 });
 
 self.addEventListener("install",
