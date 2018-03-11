@@ -38,6 +38,14 @@ self.toolbox.router.get("/(.*)", self.toolbox.cacheFirst, {
   }
 });
 
+self.toolbox.router.get("/(.*)", self.toolbox.networkFirst, {
+  origin: /hitokoto\.aiokr\.com/,
+  cache: {
+      name: contentCacheName,
+      maxEntries: maxEntries
+  }
+});
+
 self.addEventListener("install",
 function(event) {return event.waitUntil(self.skipWaiting())
 });
