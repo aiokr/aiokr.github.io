@@ -14,6 +14,8 @@ self.toolbox.options.networkTimeoutSeconds = 3;
 var cacheVersion = "-170816";
 var staticImageCacheName = "image" + cacheVersion;
 var staticAssetsCacheName = "assets" + cacheVersion;
+var contentCacheName = "content" + cacheVersion;
+var vendorCacheName = "vendor" + cacheVersion; var maxEntries = 100;
 
 /* StaticAssetsCache */
 self.toolbox.router.get("/css/(.*)", self.toolbox.networkFirst, {origin: /aiokr\.github\.io/,});
