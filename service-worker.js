@@ -11,6 +11,7 @@ self.importScripts("https://cdnjs.cat.net/ajax/libs/sw-toolbox/3.6.1/sw-toolbox.
 self.toolbox.options.debug = false;
 self.toolbox.options.networkTimeoutSeconds = 3;
 
+var cacheVersion = "-170816";
 var staticImageCacheName = "image" + cacheVersion;
 var staticAssetsCacheName = "assets" + cacheVersion;
 
