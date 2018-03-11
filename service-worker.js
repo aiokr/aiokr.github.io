@@ -19,7 +19,7 @@ self.toolbox.router.get("/css/(.*)", self.toolbox.networkFirst, {origin: /aiokr\
 self.toolbox.router.get("/js/(.*)", self.toolbox.networkFirst, {origin: /aiokr\.github\.io/,});
 self.toolbox.router.get("/static/(.*)", self.toolbox.networkFirst, {origin: /aiokr\.github\.io/,});
 self.toolbox.router.get("/fonts/(.*)", self.toolbox.cacheFirst, {
-    origin: /https:/aiokr\.github\.io/,
+    origin: /aiokr\.github\.io/,
     cache: {
         name: staticAssetsCacheName,
         maxEntries: maxEntries
