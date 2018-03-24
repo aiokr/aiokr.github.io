@@ -6,6 +6,14 @@ body{
   padding: 65px;
 }
 
+.after-padding{
+  padding: 65px;
+}
+
+.padding{
+  padding: 10px;
+}
+
 .lab-card .item{
   padding: 5px;
 }
@@ -16,23 +24,44 @@ body{
   padding: 2px;
 }
 
+.lab-card .title::before{
+  content:"# ";
+  color:#536DFE;
+}
+
 .lab-card .content{
   font-size:16px;
 }
 
-.lab-card .content a:link{
+a:link{
   color: #536DFE;
   text-decoration:none;
 }
-.lab-card .content a:visited{
+a:visited{
   color:#536DFE;
   text-decoration:none;
 }
-.lab-card .content a:hover{
+a:hover{
   color: #536DFE;
   text-decoration:none;
 }
-.lab-card .content a:active{
+a:active{
   color: #536DFE;
   text-decoration:none;
+}
+
+.header a:link{
+  color:black;
+}
+
+.header a:visited{
+  color:black;
+}
+
+.header a:hover{
+  color:black;
+}
+
+.header a:active{
+  color: black;
 }
