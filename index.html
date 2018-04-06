@@ -142,7 +142,7 @@
                     </div>
 
                     <div class="padding"> </div>
-                     
+
                     <div class="mdui-card">
                         <div class="mdui-card-primary">
                             <div class="mdui-card-primary-title lab-title">状态监控</div>
@@ -205,22 +205,45 @@
                         </div>
                     </div>
                 </div>
+                <div class="mdui-col-xs-offset
+                        mdui-col-md-1
+                        mdui-col-lg-3">
+                </div>
+            </div>
+        </div>
+        <div class="padding-20"> </div>
+        <div id="busuanzi">
+            <div class="mdui-container-fluid">
+                <div class="mdui-col-xs-offset
+                        mdui-col-md-1
+                        mdui-col-lg-3">
+                </div>
+                <div class="mdui-col-xs-12
+                            mdui-col-md-10
+                            mdui-col-lg-6">
+                            <div class="mdui-card">
+                                    <button class="mdui-card mdui-btn mdui-btn-block mdui-color-theme-accent mdui-ripple"><span>UV:</span><span  id="busuanzi_value_site_uv" ></span></button>
+                                </div>
+                </div>
             </div>
             <div class="mdui-col-xs-offset
                         mdui-col-md-1
                         mdui-col-lg-3">
             </div>
         </div>
+    </div>
 
-        <div class="after-padding"></div>
+    <div class="after-padding"></div>
 
-        <!--HITOKOTO-->
-        <script>
-            $.post("https://hitokoto.aiokr.com/", function (hitokoto) {
-                $(".hitokotoEcho").html(hitokoto);
-            })
-        </script>
-
+    <!--HITOKOTO-->
+    <script>
+        $.post("https://hitokoto.aiokr.com/", function (hitokoto) {
+            $(".hitokotoEcho").html(hitokoto);
+        })
+    </script>
+    <!--busuanzi-->
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+    </script>
 </body>
 
 </html>

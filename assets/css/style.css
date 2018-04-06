@@ -28,6 +28,11 @@ body {
     color: #536DFE;
 }
 
+a {
+    color: #536DFE;
+    text-decoration: none;
+}
+
 a:link {
     color: #536DFE;
     text-decoration: none;
@@ -48,7 +53,6 @@ a:active {
     text-decoration: none;
 }
 
-
 .header a:link {
     color: black;
 }
@@ -68,4 +72,12 @@ a:active {
 .mdui-card-primary {
     position: relative;
     padding: 24px 16px 5px 16px;
+}
+
+button {
+    color: #536DFE;
+}
+
+button span {
+    color: #536DFE;
 }
