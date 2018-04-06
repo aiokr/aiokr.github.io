@@ -14,28 +14,18 @@ body {
     padding: 10px;
 }
 
+.padding-20 {
+    padding: 20px;
+}
+
 .card {
     border-top: 3px solid #536DFE;
     word-wrap: break-word;
 }
 
-.lab-card .item {
-    padding: 5px;
-}
-
-.lab-card .title {
-    font-size: 20px;
-    color: #000000;
-    padding: 2px;
-}
-
-.lab-card .title::before {
+.lab-title::before {
     content: "# ";
     color: #536DFE;
-}
-
-.lab-card .content {
-    font-size: 16px;
 }
 
 a:link {
@@ -58,6 +48,7 @@ a:active {
     text-decoration: none;
 }
 
+
 .header a:link {
     color: black;
 }
@@ -72,4 +63,9 @@ a:active {
 
 .header a:active {
     color: black;
+}
+
+.mdui-card-primary {
+    position: relative;
+    padding: 24px 16px 5px 16px;
 }
