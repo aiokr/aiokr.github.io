@@ -46,6 +46,14 @@ self.toolbox.router.get("/(.*)", self.toolbox.networkFirst, {
   }
 });
 
+self.toolbox.router.get("/(.*)", self.toolbox.networkFirst, {
+  origin: /dn-lbstatics\.qbox\.me\busuanzi\2.3\busuanzi.pure.mini.js/,
+  cache: {
+      name: contentCacheName,
+      maxEntries: maxEntries
+  }
+});
+
 self.addEventListener("install",
 function(event) {return event.waitUntil(self.skipWaiting())
 });
